@@ -1,0 +1,168 @@
+
+@import "../../css-config/mixins.scss";
+
+.main-header {
+    width: 100%;
+    padding: 0 20px;
+    z-index: 99;
+    background-color: #1a1a43;
+    background-color: #2f1537;
+    color: white;
+    color: navajowhite;
+    border-bottom: 1px solid;
+    border-color: rgba(0, 0, 0, 0.1);
+
+    @include md {
+        padding: 0 40px;
+    }
+    .header-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 50px;
+        max-width: 1200px;
+        margin: 0 auto;
+        @include md {
+            height: 80px;
+        }
+    }
+    .left {
+        list-style-type: none;
+        display: none;
+        
+        gap: 25px;
+        @include md {
+            display: flex;
+        }
+       
+    
+        li {
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            cursor: pointer;
+            &:hover {
+                opacity: 0.6;
+            }
+          
+        }
+        .link{
+            color: navajowhite;
+            text-decoration: none;
+        }
+    }
+    .center {
+        font-size: 22px;
+        font-weight: 700;
+        cursor: pointer;
+        @include md {
+            font-size: 34px;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        @media screen and (min-width:768px) and (max-width: 970px){
+            left: 57%;
+        }
+    }
+    .right {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        @include md {
+            gap: 25px;
+        }
+        svg {
+            font-size: 20px;
+            cursor: pointer;
+            @include md {
+                font-size: 24px;
+            }
+            &:hover {
+                opacity: 0.6;
+            }
+        }
+        .cart-icon {
+            position: relative;
+            span {
+                min-width: 20px;
+                text-align: center;
+                background: #8e2de2;
+                padding: 2.5px;
+                position: absolute;
+                top: -5px;
+                right: -12px;
+                font-size: 12px;
+                line-height: 1;
+                border-radius: 10px;
+            }
+        }
+    }
+    &.sticky-header {
+        background-color: #212121;
+        background-color: #2f1537;;
+        color: white;
+        color: navajowhite;
+        position: sticky;
+        top: 0;
+        transform: translateY(-60px);
+        animation: StickyHeader 0.3s ease forwards;
+    }
+}
+
+@keyframes StickyHeader {
+    0% {
+        transform: translateY(-60px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.SearchLowResolution{
+    display: none;
+}
+.searchbar{
+    border: 1px solid navajowhite;
+    border-radius: 5px;
+    // background-image: linear-gradient(to right,#251633, #823376e0);
+    
+    height: 35px;
+    display: flex;
+    align-items: center;
+    svg,img{
+        color: navajowhite;
+    }
+    input{
+        height: 30px;
+        color: navajowhite;
+        font-size: 22px;
+        background-color: rgba(0, 0, 0, 0);
+        border: 0px;
+        margin: 0;
+        padding: 1px 3px;
+        &::placeholder{
+            color: rgba(#eee2d0,0.8);
+        }
+        
+    }
+    input:focus{
+        outline: none;
+    }
+}
+
+@media screen and (min-width:1010px) and (max-width:1200px) {
+    .searchbar{
+        input{
+            font-size: 18px;
+        }
+    }
+}
+@media screen and (min-width:0px) and (max-width:1010px){
+    .SearchLowResolution{
+        display:unset;
+    }
+    .searchbar{
+        display: none;
+    }
+}

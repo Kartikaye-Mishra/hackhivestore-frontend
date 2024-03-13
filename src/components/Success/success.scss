@@ -1,0 +1,20 @@
+.success_container{
+    height: 60vh;
+
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 3rem;
+}
+.success_h2,.success_h4{
+    text-align: center;
+}
+.success_h4{
+    color: navajowhite;
+    text-decoration: none;
+}
+.success_h4:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}

@@ -1,0 +1,12 @@
+body{
+    background-image: linear-gradient(to right, #42275a, #734b6d);
+    color: navajowhite;
+
+}
+*{
+    scroll-behavior: smooth;
+}
+/* font color{
+    light:#eee2d0
+    dark:navajowhite
+} */

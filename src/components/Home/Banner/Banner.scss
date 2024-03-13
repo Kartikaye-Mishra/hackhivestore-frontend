@@ -1,0 +1,194 @@
+@import "../../../css-config/mixins.scss";
+.hero-banner {
+    padding: 40px 0;
+    position: relative;
+    background-image: linear-gradient(to right, #2f2380, #0087e0ab);
+    background-image: linear-gradient(to right, #8e2de2, #e000d8);
+    background-image: linear-gradient(to right, #42275a, #734b6d);
+   
+   
+    @include md {
+        height: calc(100vh - 80px);
+    }
+    .content {
+        height: 100%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        flex-direction: column-reverse;
+        max-width: calc(100% - 20px);
+        margin: 0 auto;
+        position: relative;
+        @include md {
+            flex-direction: row;
+            max-width: 1200px;
+        }
+        .banner-img {
+            position: relative;
+            z-index: 9;
+            width: 200px;
+            margin-bottom: 20px;
+            @include md {
+                width: 500px;
+                margin-right: 60px;
+                margin-top: 50px;
+                margin-bottom: 0;
+            }
+            @include xxl {
+                width: 600px;
+                margin-right: 0;
+                margin-top: 0;
+            }
+        }
+        .text-content {
+            color: white;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            @include md {
+                position: absolute;
+                left: 50px;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+            @include xxl {
+                left: 0;
+            }
+            h1 {
+                font-size: 80px;
+                font-weight: 700;
+                line-height: 1;
+                color: white;
+                color: navajowhite;
+                margin-bottom: 20px;
+                // @include md {
+                //     font-size: 180px;
+                // }
+            }
+
+            p {
+                max-width: 300px;
+                font-size: 16px;
+                line-height: 20px;
+                margin-bottom: 20px;
+                color: #eee2d0;
+                margin-left: 30px;
+                @include md {
+                    max-width: 500px;
+                    font-size: 18px;
+                    line-height: 24px;
+                    margin-bottom: 40px;
+                }
+                @media screen and (min-width:330px) {
+                    font-size: 18px;
+                    // background-color: rgb(14, 106, 186);
+                }
+            }
+            .ctas {
+                display: flex;
+                justify-content: center;
+                gap: 20px;
+                .banner-cta {
+                    text-transform: uppercase;
+                    font-size: 13px;
+                    font-weight: 500;
+                    width: fit-content;
+                    border: 2px solid white;
+                    border: 2px solid navajowhite;
+                    color: #eee2d0;
+                    padding: 10px 20px;
+                    transition: all ease 0.3s;
+                    cursor: pointer;
+                    &.v2 {
+                        background-color: #eee2d0;
+                        // color: black;
+                        // color: #eee2d0;
+                        .link{
+                            text-decoration: none;
+                            color: #23083c;
+                        }
+                    }
+                    &:hover {
+                        opacity: 0.6;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 910px) {
+   
+    .hero-banner .content .text-content {   
+        left: 2px;
+        h1{
+            font-size: 65px;
+        }
+        p{
+            font-size: 18px;
+            text-align: left;
+        }
+
+    }
+    .hero-banner .content .banner-img {
+        width: calc(100vw - 460px);
+        margin-right: 0px;
+    }
+  }
+@media screen and (min-width: 850px) and (max-width: 910px) {
+    
+    .hero-banner .content .text-content {   
+        left: 5px;
+        h1{
+            font-size: 65px;
+        }
+        p{
+            // font-size: 15px;
+            text-align: left;
+        }
+    }
+    .hero-banner .content .banner-img {
+        width: 370px;
+        margin-right: 0px;
+    }
+  }
+@media screen and (min-width: 910px) and (max-width: 1020px) {
+    .hero-banner .content .text-content h1{
+        font-size: 65px;
+     }
+     .hero-banner .content .text-content{
+        left: 0px;
+     }
+    .hero-banner .content .banner-img {
+        width: 400px;
+        margin-left: 5px ;
+        margin-right: 10px;
+    }
+  }
+@media screen and (min-width: 1020px) and (max-width: 1075px) {
+
+    .hero-banner .content .banner-img {
+        width: 450px;
+        margin-left: 5px ;
+        margin-right: 10px;
+    }
+  }
+@media screen and (min-width: 1075px) and (max-width: 1200px) {
+  
+    .hero-banner .content .banner-img {
+        width: 450px;
+        margin-left: 5px ;
+        margin-right: 20px;
+    }
+  }
+  @media screen and (min-width:1200px) {
+    
+
+  .hero-banner .content .text-content {   
+   
+    p{
+        
+        font-size: 22px;
+    }
+}
+}
